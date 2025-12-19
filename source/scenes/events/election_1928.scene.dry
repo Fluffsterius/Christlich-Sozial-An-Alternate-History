@@ -673,7 +673,7 @@ on-arrival: z_relation -5; csrpd_relation -10 Q.catholics_spd -=5
 
 - @social_christian_coalition_3
 - title: Accept this Social offer!
-on-arrival: chancellor = "Wirth" chancellor_party = "CSRPD" spd_in_government = 1 leverage = 40; z_in_government = 1 csrpd_in_government = 1 csrpd_relation += 8
+- on-arrival: chancellor = "Wirth" chancellor_party = "CSRPD" spd_in_government = 1 leverage = 40; z_in_government = 1 csrpd_in_government = 1 csrpd_relation += 8
 
 
 @unity_government
