@@ -237,19 +237,19 @@ Q.sapd_formed = 0;
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_csrpd = 12;
-Q.workers_spd = 60;
-Q.workers_kpd = 20;
-Q.workers_z = 5;
+Q.workers_spd = 52;
+Q.workers_kpd = 18;
+Q.workers_z = 9;
 Q.workers_ddp = 0;
 Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
+Q.workers_dnvp = 2;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
-Q.old_middle_csrpd = 7;
-Q.old_middle_spd = 5;
+Q.old_middle_csrpd = 2;
+Q.old_middle_spd = 4;
 Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
+Q.old_middle_z = 4;
 Q.old_middle_ddp= 10;
 Q.old_middle_dvp = 25;
 Q.old_middle_dnvp = 25;
@@ -257,28 +257,28 @@ Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
 Q.new_middle_csrpd = 8;
-Q.new_middle_spd = 5;
+Q.new_middle_spd = 3;
 Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
+Q.new_middle_z = 6;
+Q.new_middle_ddp= 29;
+Q.new_middle_dvp = 22;
 Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
+Q.new_middle_nsdap = 3;
 Q.new_middle_other = 15;
 
 Q.rural_csrpd = 12;
-Q.rural_spd = 10;
+Q.rural_spd = 8;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
 Q.rural_ddp= 5;
 Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
+Q.rural_dnvp = 40;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
 Q.unemployed_csrpd = 12;
 Q.unemployed_spd = 20;
-Q.unemployed_kpd = 50;
+Q.unemployed_kpd = 40;
 Q.unemployed_z = 1;
 Q.unemployed_ddp = 0;
 Q.unemployed_dvp = 0;
@@ -287,9 +287,9 @@ Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
 Q.catholics_csrpd = 15;
-Q.catholics_spd = 8;
+Q.catholics_spd = 4;
 Q.catholics_kpd = 1;
-Q.catholics_z = 48;
+Q.catholics_z = 42;
 Q.catholics_ddp = 0;
 Q.catholics_dvp = 5;
 Q.catholics_dnvp = 5;
