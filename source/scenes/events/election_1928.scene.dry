@@ -666,7 +666,10 @@ view-if: social_christian coalition >= 50 and ddp_relation <= 30 and z_relation 
 A Social-Christian Coalition has become possible because of the anti-social ideas of the DDP and the left flank's growth in Zentrum
 
 - @social_christian_coalition_2
-- @reject_the_social_christian_coalition: No, We reject this offer
+- @reject_the_social_christian_coalition: No, We reject this offer.
+
+@reject_the_social_christian_coalition
+on-arrival: z_relation -5; csrpd_relation -10 Q.catholics_spd -=5
 
 - @social_christian_coalition_3
 Title: Accept this Socialist-Christian Accord
