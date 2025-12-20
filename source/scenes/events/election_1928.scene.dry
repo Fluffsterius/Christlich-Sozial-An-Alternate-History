@@ -213,6 +213,13 @@ data = data.concat([
         "legend": Q.ddp_name,
         "name": Q.ddp_name,
         "seats": Math.round(Q.ddp_r*5),
+
+    },
+    {
+        "id": "csrpd",
+        "legend": "CSRPD",
+        "name": "CSRPD",
+        "seats": Math.round((Q.csrpd_r - 3)*5),
     },
     {
         "id": "z",
