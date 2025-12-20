@@ -661,7 +661,7 @@ We have assembled a new coalition under Otto Braun.
 @social_christian_coalition
 title: Perhaps we ought to try a coalition without the Liberals? A truly social coalition!
 subtitle: SPD + Z + CSRPD 
-view-if: social_christian_coalition >= 50 and ddp_relation <= 30 and z_relation >= 60;
+view-if social_christian_coalition >= 50 and ddp_relation <= 30 and z_relation >= 60;
 
 A Social-Christian Coalition has become possible because of the anti-social ideas of the DDP and the left flank's growth in Zentrum
 
