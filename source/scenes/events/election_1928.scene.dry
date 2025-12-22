@@ -216,8 +216,8 @@ data = data.concat([
     },
     {
         "id": "csrpd",
-        "legend": "CSRPD",
-        "name": "CSRPD",
+        "legend": "<span style="color: #FF6B21;">**CSRPD**</span>",
+        "name": "<span style="color: #FF6B21;">**CSRPD**</span>",
         "seats": Math.round(Q.csrpd_r*5),
     },
     {
@@ -291,7 +291,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#FFDE00'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff6b21'> </div> !}CSRPD: {!</td><td>!} [+ csrpd_r +]% {!</td><td>!} [+ str_change_csrpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff6b21'> </div> !}<span style="color: #FF6B21;">**CSRPD**</span>: {!</td><td>!} [+ csrpd_r +]% {!</td><td>!} [+ str_change_csrpd +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
@@ -308,11 +308,11 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + CSRPD + [+ ddp_name +]): [+ weimar_coalition +]%
+Weimar Coalition (SPD + Z + <span style="color: #FF6B21;">**CSRPD**</span> + [+ ddp_name +]): [+ weimar_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + CSRPD + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+Grand Coalition (SPD + Z + BVP + <span style="color: #FF6B21;">**CSRPD**</span> + [+ ddp_name +] + DVP): [+ grand_coalition +]%
 
-Bourgeois Coalition (Z + CSRPD + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
+Bourgeois Coalition (Z + <span style="color: #FF6B21;">**CSRPD**</span> + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
 
 Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
 
@@ -341,7 +341,7 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: SPD + CSRPD + KPD + Z + [+ ddp_name +] + CSRPD  [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%)
+subtitle: SPD + <span style="color: #FF6B21;">**CSRPD**</span> + KPD + Z + [+ ddp_name +] + <span style="color: #FF6B21;">**CSRPD**</span>  [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%)
 unavailable-subtitle: SPD + KPD + Z + [+ ddp_name +] [? if sapd_formed: + SAPD ?]([+ popular_front_coalition +]%) - [? if ((kpd_relation < 65 and kpd_party_leader == "Thälmann") or (kpd_relation < 45 and kpd_party_leader == "Conciliators")): We do not have good enough relations with the KPD. ?][? if (z_relation < 45 and z_party_leader == "Joos") or (z_relation < 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation < 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators"): We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front_coalition >= 50
 choose-if: (((kpd_relation >= 65 and kpd_party_leader == "Thälmann") or (kpd_relation >= 45 and kpd_party_leader == "Conciliators")) and ((z_relation >= 45 and z_party_leader == "Joos") or (z_relation >= 65 and z_party_leader != "Joos" and kpd_party_leader != "Conciliators") or (z_relation >= 55 and z_party_leader != "Joos" and kpd_party_leader == "Conciliators")) and ddp_relation >= 50 and communist_coalition >= 3) or (z_party_leader == "Joos" and kpd_party_leader == "Conciliators" and z_relation >= 30 and kpd_relation >= 30)
@@ -627,7 +627,7 @@ The third option is to have new elections.
 
 @new_grand_coalition
 title: A "New Grand Coalition" of all the constitutional parties?
-subtitle: SPD + CSRPD Z + BVP + [+ ddp_name +] + DVP + Others ([+ neo_weimar_coalition +]%)
+subtitle: SPD + <span style="color: #FF6B21;">**CSRPD**</span> Z + BVP + [+ ddp_name +] + DVP + Others ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
 choose-if: z_relation >= 50 and dvp_relation >= 30
 unavailable-subtitle: SPD + Z + BVP + [+ ddp_name +] + DVP + Others ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if dvp_relation < 30 : We do not have adequate relations with the DVP. ?]
@@ -668,7 +668,7 @@ We have assembled a new coalition under Otto Braun.
 
 @unity_government
 title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
-subtitle: SPD + Z + CSRPD + BVP + [+ ddp_name +] + DVP + Others ([+ neo_weimar_coalition +]%)
+subtitle: SPD + Z + <span style="color: #FF6B21;">**CSRPD**</span> + BVP + [+ ddp_name +] + DVP + Others ([+ neo_weimar_coalition +]%)
 view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50 and z_relation >= 10
 
 The Center Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
@@ -678,7 +678,7 @@ The Center Party leader, Joseph Joos, clearly sees the threat from the ascension
 
 @unity_government_2
 title: Accept the offer!
-on-arrival: chancellor = "Wirth"; chancellor_party = "CSRPD"; spd_in_government = 1; csrpd_in_government = 1; in_grand_coalition = 1; in_unity_government = 1; leverage = 15; z_relation += 5; dvp_relation += 4
+on-arrival: chancellor = "Wirth"; chancellor_party = "<span style="color: #FF6B21;">**CSRPD**</span>"; spd_in_government = 1; csrpd_in_government = 1; in_grand_coalition = 1; in_unity_government = 1; leverage = 15; z_relation += 5; dvp_relation += 4
 achievement: constitutional_coalition
 go-to: ministries
 
@@ -700,7 +700,7 @@ Our rejection of the unity government has hurt our relations with the bourgeois 
 view-if: z_party_leader = "Joos"
 choose-if: president == "Braun"
 unavailable-subtitle: President Hindenburg will not support a minority government led by Joseph Wirth.
-on-arrival: chancellor = "Wirth"; chancellor_party = "CSRPD"; spd_in_government = 0; csrpd_in_government = 1; spd_toleration = 1; z_relation += 5; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; pro_republic -= 2;
+on-arrival: chancellor = "Wirth"; chancellor_party = "<span style="color: #FF6B21;">**CSRPD**</span>"; spd_in_government = 0; csrpd_in_government = 1; spd_toleration = 1; z_relation += 5; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; pro_republic -= 2;
 
 We have supported a minority government led by the Center Party under Chancellor Joseph Wirth.
 
@@ -930,7 +930,7 @@ We have won the vote of no confidence, and are currently ruling under an SPD min
 
 @weimar_coalition
 title: We can form a Weimar Coalition.
-subtitle: SPD + CSRPD + Z + [+ ddp_name +] [? if sapd_formed and kpd_relation >= 30 : + SAPD toleration ?] ([+ weimar_coalition +]%)
+subtitle: SPD + <span style="color: #FF6B21;">**CSRPD**</span> + Z + [+ ddp_name +] [? if sapd_formed and kpd_relation >= 30 : + SAPD toleration ?] ([+ weimar_coalition +]%)
 view-if: weimar_coalition >= 50
 on-arrival: leverage += 5; leverage += 5 if z_party_leader == "Joos"; in_weimar_coalition = 1; spd_in_government = 1; csrpd_in_government = 1; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "Z"; interior_minister_party = "Z"; justice_minister_party = ddp_name; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = ddp_name; finance_minister_party = "Z"; agriculture_minister_party = "Z"; foreign_minister = "Wirth"; interior_minister = "Wirth"; justice_minister = "Koch-Weser"; labor_minister = "Stegerwald"; reichswehr_minister = "Groener"; economic_minister = "Dietrich"; finance_minister = "Köhler"; agriculture_minister = "Hermes";
 achievement: weimar_coalition
