@@ -191,11 +191,15 @@ data = [
     "legend": "CSRPD",
     "name": "CSRPD",
     "seats": Math.round(Q.csrpd_r*5)
+     
+      },
+      {
 
         "id": "kpd",
         "legend": "KPD",
         "name": "KPD",
         "seats": Math.round(Q.kpd_r*5),
+       
     }
 ];
 if (Q.sapd_formed && Q.sapd_r) {
